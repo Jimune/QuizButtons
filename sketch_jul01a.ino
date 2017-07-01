@@ -1,3 +1,7 @@
+// Quiz Button system where the first person to press the button gets to answer, their button lights up if they are first.
+//  
+// 
+// Version 0.1
 
 int MASTER_BUTTON = 53;
 
@@ -54,7 +58,7 @@ void loop() {
   } else if (digitalRead(MASTER_BUTTON) == HIGH) {
     for (int i = 0; i < sizeof(buttons); i++) {
       digitalWrite(buttons[i].output, LOW);
-      accept_input = false;
+      accept_input = true;
     }
   }
 }
